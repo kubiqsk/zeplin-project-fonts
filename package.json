@@ -12,5 +12,8 @@
   "dependencies": {
     "@zeplin/sdk": "^1.15.0",
     "inquirer": "^9.1.4"
+  },
+  "bin": {
+    "zeplinFonts": "./index.js"
   }
 }

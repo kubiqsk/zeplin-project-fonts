@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { ZeplinApi, Configuration } from "@zeplin/sdk";
 import inquirer from "inquirer";
 
@@ -85,12 +87,14 @@ const run = async () => {
 	
 	for( let i = 0; i < screens.length; i++ ){
 		const screen = screens[i];
-		console.log(`Getting fonts from screen ${screen.name}: https://app.zeplin.io/project/${selectedProject.id}/screen/${screen.id}`);
+		console.log(`Getting fonts from screen ${screen.name}:`);
+		console.log(`https://app.zeplin.io/project/${selectedProject.id}/screen/${screen.id}`);
 		const { data: screenData } = await zeplin.screens.getLatestScreenVersion( selectedProject.id, screen.id );
 		getFontsList( screenData.layers, screen.name );
 	}
 	console.log('----');
-	console.log(`Here is the font list from project ${selectedProject.name}: https://app.zeplin.io/project/${selectedProject.id}/dashboard`);
+	console.log(`Here is the font list from project ${selectedProject.name}:`);
+	console.log(`https://app.zeplin.io/project/${selectedProject.id}/dashboard`);
 	console.dir( allTextStyles, { depth: null } );
 };
 
