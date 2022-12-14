@@ -1,0 +1,16 @@
+{
+  "name": "zeplin-project-fonts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeplin/sdk": "^1.15.0",
+    "inquirer": "^9.1.4"
+  }
+}
